@@ -36,7 +36,6 @@ export class AppComponent implements OnInit {
         this.dados_da_samu = this.samuService.getAllMunicipiosAtendidosPorEstado();
         this.uf = this.ufService.getUf(this.id);
         this.media = this.samuService.getMunicipioMedia(this.id);
-        //this.qtd = this.samuService.getMunicipioQtd(this.id);
         this.anos = this.samuService.getMunicipioAno(this.id);
     }
 

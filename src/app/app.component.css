@@ -1,0 +1,21 @@
+.corpo{
+  font-family: sans-serif;
+}
+header{
+  font-size: 15pt;
+  margin-bottom: 10px;
+}
+#Detail{
+  font-size: 12pt;
+  margin-bottom: 10px;
+}
+table, tr, td{
+   border-collapse: collapse;
+   border: 1px solid black;
+}
+table{
+  margin: auto;
+}
+td{
+  width: 100px;
+}

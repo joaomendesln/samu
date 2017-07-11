@@ -1,13 +1,23 @@
 <!--The whole content below can be removed with the new code.-->
-<div style="text-align:center" class="title">
-  <h1>{{title}}
-    {{teste}}</h1>
-    Nome: {{uf.nome}} <br>
-    Área: {{uf.area}} <br>
-    Quantidade: {{qtd}} <br>
-    Média: {{media}} <br>
-    {{ano}} <br>
-    <li *ngFor="let ano of anos">
-        <span class="badge">{{ano.ano}}</span> {{ano.valor}}
-    </li>
+<div style="text-align:center" class="corpo">
+  <header>
+    <b>{{uf.nome}}</b> <br>
+  </header>
+  <div id="Detail">
+    <b>ID:</b> {{uf.id}} <br>
+    <b>Área:</b> {{uf.area}} km² <br>
+    <b>Média:</b> {{media}} <br>
+  </div>
+  <div id="master">
+      <table>
+        <tr>
+          <td>Ano</td>
+          <td>Municípios Atendidos</td>
+        </tr>
+        <tr *ngFor="let ano of anos">
+          <td>{{ano.ano}}</td>
+          <td>{{ano.valor}}</td>
+        </tr>
+      </table>
+  </div>
 </div>
