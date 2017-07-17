@@ -10,11 +10,11 @@ import {UFs} from './services/mock-ufs'
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './todos-os-dados.component.html',
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
-    title = 'app';
+export class TodosOsDadosComponent implements OnInit {
+    title = 'todos os dados';
     id = 21;
     uf: UF;
     media: number;

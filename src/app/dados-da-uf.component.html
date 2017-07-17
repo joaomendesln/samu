@@ -1,0 +1,14 @@
+<div style="text-align:center" class="corpo">
+  <div id="master">
+      <table>
+        <tr>
+          <td>Ano</td>
+          <td>Municípios Atendidos</td>
+        </tr>
+        <tr *ngFor="let ano of anos">
+          <td>{{ano.ano}}</td>
+          <td>{{ano.valor}}</td>
+        </tr>
+      </table>
+  </div>
+</div>

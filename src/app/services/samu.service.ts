@@ -26,11 +26,11 @@ export class SamuService {
     return Math.round(soma/qtd);
   }
 
-  getMunicipioAno(id: number): Dados[] {
+  getPorUFMunicipiosAtendidosPorEstado(uf: UF): Dados[] {
     let ano: Dados[] = [];
     let i = 0;
     for (let entrada of VALORES){
-      if(entrada.uf_id === id)
+      if(entrada.uf_id === uf.id)
       {
         ano[i] = entrada;
         i++;
