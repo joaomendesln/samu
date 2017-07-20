@@ -19,6 +19,7 @@ export class DadosDaUFComponent implements OnInit {
     uf: UF;
     anos: Dados[];
     dados_da_samu : Dados[];
+    media: number;
 
     constructor(private ufService: UFService, private samuService: SamuService)
     { }
@@ -27,6 +28,7 @@ export class DadosDaUFComponent implements OnInit {
         this.dados_da_samu = this.samuService.getAllMunicipiosAtendidosPorEstado();
         this.uf = this.ufService.getPorID(this.id);
         this.anos = this.samuService.getPorUFMunicipiosAtendidosPorEstado(this.uf);
+        this.media = this.samuService.getMunicipioMedia(this.id);
     }
 
 }

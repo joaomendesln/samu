@@ -17,10 +17,12 @@ export class TodosOsDadosComponent implements OnInit {
     title = 'todos os dados';
     id = 21;
     uf: UF;
-    media: number;
+    medias: number[];
     anos: Dados[];
+    atendimentos: Dados[][];
     ufs : UF[];
     dados_da_samu : Dados[];
+    UFs : UF[];
 
     constructor(private ufService: UFService, private samuService: SamuService)
     { }
@@ -29,8 +31,10 @@ export class TodosOsDadosComponent implements OnInit {
         this.ufs = this.ufService.getAll();
         this.dados_da_samu = this.samuService.getAllMunicipiosAtendidosPorEstado();
         this.uf = this.ufService.getPorID(this.id);
-        this.media = this.samuService.getMunicipioMedia(this.id);
         this.anos = this.samuService.getPorUFMunicipiosAtendidosPorEstado(this.uf);
-    }
+        this.UFs = this.ufService.getUFs();
+        this.medias = this.samuService.getMedias(this.ufs);
+        //this.atendimentos = this.samuService.getPorUFMunicipiosAtendidosTotas(this.UFs);
+    } 
 
 }

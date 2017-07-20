@@ -21,4 +21,13 @@ export class UFService {
     }
     return uf;
   }
+
+  getUFs() : UF []
+  {
+    let uf: UF[] = [];
+    for (let entrada of UFs){
+      uf.push(entrada);      
+    }
+    return uf;
+  }
 }

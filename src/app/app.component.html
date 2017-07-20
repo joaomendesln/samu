@@ -1,27 +1,11 @@
 <!--The whole content below can be removed with the new code.-->
 <div style="text-align:center" class="corpo">
   <header>
-    <b>{{uf.nome}}</b> <br>
   </header>
-  <div id="Detail">
-    <b>ID:</b> {{uf.id}} <br>
-    <b>Área:</b> {{uf.area}} <br>
-    <b>Média:</b> {{media}} <br>
+  <div id="botoes">
+    <a routerLink="/resumo"><button>Resumo</button></a>
+    <a routerLink="/dados-da-uf"><button>Dados da UF</button></a>
+    <a routerLink="/todos-os-dados"><button>Todos os dados</button></a>
+    <router-outlet></router-outlet>
   </div>
-  <div id="master">
-      <table>
-        <tr>
-          <td>Ano</td>
-          <td>Municípios Atendidos</td>
-        </tr>
-        <tr *ngFor="let ano of anos">
-          <td>{{ano.ano}}</td>
-          <td>{{ano.valor}}</td>
-        </tr>
-      </table>
-  </div>
-  <a routerLink="/resumo">Resumo</a>
-  <a routerLink="/dados-da-uf">Dados da UF</a>
-  <a routerLink="/todos-os-dados">Todos os dados</a>
-  <router-outlet></router-outlet>
 </div>

@@ -1,11 +1,13 @@
 .corpo{
   font-family: sans-serif;
+  margin-top: 20px;
 }
 header{
   font-size: 15pt;
   margin-bottom: 10px;
 }
 #Detail{
+  margin-top: 20px;
   font-size: 12pt;
   margin-bottom: 10px;
 }
@@ -15,7 +17,26 @@ table, tr, td{
 }
 table{
   margin: auto;
+  margin-top: 20px;
 }
 td{
   width: 100px;
+}
+button {
+  background-color: #3498db;
+  color: #fff;
+  margin: 0 10px 0 0;
+  outline: none;
+  border: none;
+  font-size: 13pt;
+  padding: 3px 10px;
+  font-family: sans-serif;
+  border-radius: 0;
+}
+button:hover{
+  background-color: #2980b9;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+#botoes{
 }

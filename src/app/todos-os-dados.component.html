@@ -1,22 +1,6 @@
 <div style="text-align:center" class="corpo">
-  <header>
-    <b>{{uf.nome}}</b> <br>
-  </header>
-  <div id="Detail">
-    <b>ID:</b> {{uf.id}} <br>
-    <b>Área:</b> {{uf.area}} <br>
-    <b>Média:</b> {{media}} <br>
-  </div>
-  <div id="master">
-      <table>
-        <tr>
-          <td>Ano</td>
-          <td>Municípios Atendidos</td>
-        </tr>
-        <tr *ngFor="let ano of anos">
-          <td>{{ano.ano}}</td>
-          <td>{{ano.valor}}</td>
-        </tr>
-      </table>
+  <div *ngFor="let uf of UFs">
+    {{uf.nome}}
+    {{uf.area}}
   </div>
 </div>
