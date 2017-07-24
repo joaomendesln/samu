@@ -6,6 +6,7 @@ import { VALORES } from './mock-samu_municipios_atendidos_por_estado';
 import { UF } from '../types/uf';
 import { UFs } from './mock-ufs';
 
+import { Total } from '../types/total';
 
 @Injectable()
 export class SamuService {
@@ -59,23 +60,4 @@ export class SamuService {
     }
     return ano;
   }
-
-  /*getPorUFMunicipiosAtendidosTotas(ufs: UF[]): Dados[] {
-    let atendimentos: Dados[] = [][];
-    let i = 0;
-    let j = 0;
-    for (let uf of ufs){
-      for (let entrada of VALORES){
-        atendimentos[i] = [];
-        if(entrada.uf_id === uf.id)
-        {
-          atendimentos[j][i] = entrada;
-          i++;
-        }
-      }
-      i = 0;
-      j++;
-    }
-    return atendimentos;
-  }*/
 }

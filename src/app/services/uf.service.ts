@@ -26,7 +26,7 @@ export class UFService {
   {
     let uf: UF[] = [];
     for (let entrada of UFs){
-      uf.push(entrada);      
+      uf.push(entrada);
     }
     return uf;
   }

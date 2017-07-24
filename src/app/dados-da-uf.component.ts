@@ -30,5 +30,4 @@ export class DadosDaUFComponent implements OnInit {
         this.anos = this.samuService.getPorUFMunicipiosAtendidosPorEstado(this.uf);
         this.media = this.samuService.getMunicipioMedia(this.id);
     }
-
 }
