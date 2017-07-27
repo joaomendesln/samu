@@ -52,26 +52,56 @@ export class TotalService {
     return ano;
   }
 
+  private addDado(ano: number, valor: number, uf:UF, atendimentos: Total[]) : void {
+    let total : Total = atendimentos.find(dado => dado.uf.id === uf.id, undefined);
+
+    if (!total) {
+      total = new Total(uf);
+      atendimentos.push(total);
+    }
+
+    total.dados.push(new Dado(ano, valor));
+  }
+
   getPorUFMunicipiosAtendidosPorEstadoTodas(ufs: UF[]): Total[] {
     let atendimentos: Total[] = [];
+
+    entrada.forEach(ufs) => {
+      
+    }
+
+    for(let entrada of UFs)
+    {
+      let dados = this.getPorUFMunicipiosAtendidosPorEstadoUnica(entrada.id);
+    }
+
+    this.addDado(2017, 100, ufs[0], atendimentos);
+    this.addDado(2016, 300, ufs[0], atendimentos);
+
+    this.addDado(2017, 100, ufs[1], atendimentos);
+    this.addDado(2016, 300, ufs[1], atendimentos);
+
     // let dados: Dados[] = [];
     // let uf: UF;
     // let i = 0;
     // let j = 0;
-    for (let entrada of UFs){
-      let uf = this.getPorID(entrada.id);
-      let dados = this.getPorUFMunicipiosAtendidosPorEstadoUnica(entrada.id);
 
-      let atendimento = this.encontrarUF(uf, atendimentos);
 
-      dados.forEach((dado) => {
-        atendimento.valores.push(dado.valor);
-        atendimento.anos.push(dado.ano);
-        atendimento.dados.push({ano: dado.ano, valor: dado.valor});
-        atendimento.dados[0].ano;
-        // dado.uf.[id | nome | area]
-        // dado.dados.[ano | valor]
-      });
+    // for (let entrada of UFs){
+    //   let uf = this.getPorID(entrada.id);
+    //   let dados = this.getPorUFMunicipiosAtendidosPorEstadoUnica(entrada.id);
+    //
+    //   let atendimento = this.encontrarUF(uf, atendimentos);
+    //
+    //   dados.forEach((dado) => {
+    //     atendimento.valores.push(dado.valor);
+    //     atendimento.anos.push(dado.ano);
+    //     atendimento.dados.push({ano: dado.ano, valor: dado.valor});
+    //     atendimento.dados[0].ano;
+    //     // dado.uf.[id | nome | area]
+    //     // dado.dados.[ano | valor]
+    //   });
+
 
       // let atendimento = new Total();
       // atendimentos[i].uf = this.getPorID(entrada.id);
@@ -84,7 +114,9 @@ export class TotalService {
       // }
       // i++;
       // j = 0;
-    }
+
+
+    // }
     return atendimentos;
   }
 
@@ -93,4 +125,9 @@ export class TotalService {
     if (itens == undefined) new Total(uf);
     return itens[0];
   }
+
+  teste(): number {
+    return 1;
+  }
+
 }

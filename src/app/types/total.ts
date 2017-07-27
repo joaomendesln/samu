@@ -14,4 +14,8 @@ export class Total {
 export class Dado {
   ano: number;
   valor: number;
+  constructor(ano: number, valor: number) {
+    this.ano = ano;
+    this.valor = valor;
+  }
 }

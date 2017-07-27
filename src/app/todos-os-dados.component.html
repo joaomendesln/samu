@@ -1,5 +1,8 @@
 <div style="text-align:center" class="corpo">
+  oi
+  {{numero}}
+  {{atendimentos}}
   <div *ngFor="let atendimento of atendimentos">
-    {{atendimento.uf}}
+    {{atendimento.uf.nome}} <span *ngFor="let dado of atendimento.dados">{{dado.ano}} {{dado.valor}}</span>
   </div>
 </div>

@@ -9,7 +9,7 @@ import {SamuService} from './services/samu.service'
 import {UFs} from './services/mock-ufs'
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-dados',
   templateUrl: './dados-da-uf.component.html',
   styleUrls: ['./app.component.css']
 })

@@ -6,8 +6,6 @@ import { VALORES } from './mock-samu_municipios_atendidos_por_estado';
 import { UF } from '../types/uf';
 import { UFs } from './mock-ufs';
 
-import { Total } from '../types/total';
-
 @Injectable()
 export class SamuService {
 

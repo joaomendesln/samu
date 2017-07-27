@@ -2,9 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+
 import { UFService } from './services/uf.service';
 import { SamuService } from './services/samu.service';
-import { ResumoComponent } from "./resumo.component";
+import { TotalService } from './services/total.service';
+
+import { ResumoComponent } from './resumo.component';
 import { DadosDaUFComponent } from './dados-da-uf.component';
 import { TodosOsDadosComponent } from './todos-os-dados.component';
 
@@ -32,7 +35,7 @@ import { TodosOsDadosComponent } from './todos-os-dados.component';
       }
     ])
 ],
-  providers: [UFService, SamuService],
+  providers: [UFService, SamuService, TotalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
