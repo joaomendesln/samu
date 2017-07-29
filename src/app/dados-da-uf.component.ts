@@ -26,8 +26,8 @@ export class DadosDaUFComponent implements OnInit {
 
     ngOnInit(): void {
         this.dados_da_samu = this.samuService.getAllMunicipiosAtendidosPorEstado();
-        this.uf = this.ufService.getPorID(this.id);
-        this.anos = this.samuService.getPorUFMunicipiosAtendidosPorEstado(this.uf);
-        this.media = this.samuService.getMunicipioMedia(this.id);
+        this.ufService.getPorID(this.id).then(uf => this.uf = uf);
+        this.samuService.getMunicipioMedia(this.id).then(media => this.media = media);
+        this.samuService.getPorUFMunicipiosAtendidosPorEstado(this.uf).then(anos => this.anos = anos);
     }
 }

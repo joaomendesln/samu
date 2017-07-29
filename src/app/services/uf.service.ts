@@ -9,7 +9,7 @@ export class UFService {
     return UFs;
   }
 
-  getPorID(id: number) : UF
+  getPorID(id: number) : Promise<UF>
   {
     let uf: UF;
     for (let entrada of UFs){
@@ -19,15 +19,15 @@ export class UFService {
           break;
       }
     }
-    return uf;
+    return Promise.resolve(uf);
   }
 
-  getUFs() : UF []
+  getUFs() : Promise<UF[]>
   {
     let uf: UF[] = [];
     for (let entrada of UFs){
       uf.push(entrada);
     }
-    return uf;
+    return Promise.resolve(uf);
   }
 }

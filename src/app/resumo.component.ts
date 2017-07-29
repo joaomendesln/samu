@@ -23,15 +23,13 @@ export class ResumoComponent implements OnInit {
     ufs: UF[];
     uf: UF;
     media: number;
-    //numero = this.totalService.teste();
 
-    constructor(private ufService: UFService, private samuService: SamuService/*, private totalService: TotalService*/)
+    constructor(private ufService: UFService, private samuService: SamuService)
     { }
 
     ngOnInit(): void {
         this.ufs = this.ufService.getAll();
-        this.uf = this.ufService.getPorID(this.id);
-        this.media = this.samuService.getMunicipioMedia(this.id);
-        //this.numero = this.totalService.teste();
+        this.ufService.getPorID(this.id).then(uf => this.uf = uf);
+        this.samuService.getMunicipioMedia(this.id).then(media => this.media = media);
     }
 }

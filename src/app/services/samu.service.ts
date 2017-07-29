@@ -13,7 +13,7 @@ export class SamuService {
     return VALORES;
   }
 
-  getMunicipioMedia(id: number): number {
+  getMunicipioMedia(id: number): Promise<number> {
     let uf: UF;
     let soma = 0;
     let qtd = 0;
@@ -24,10 +24,10 @@ export class SamuService {
         qtd++;
       }
     }
-    return Math.round(soma/qtd);
+    return Promise.resolve(Math.round(soma/qtd));
   }
 
-  getMedias(ufs: UF[]): number[] {
+  /*getMedias(ufs: UF[]): number[] {
     let soma = 0;
     let qtd = 0;
     let medias: number[];
@@ -44,9 +44,9 @@ export class SamuService {
       qtd = 0;
     }
     return medias;
-  }
+  }*/
 
-  getPorUFMunicipiosAtendidosPorEstado(uf: UF): Dados[] {
+  getPorUFMunicipiosAtendidosPorEstado(uf: UF): Promise<Dados[]> {
     let ano: Dados[] = [];
     let i = 0;
     for (let entrada of VALORES){
@@ -56,6 +56,6 @@ export class SamuService {
         i++;
       }
     }
-    return ano;
+    return Promise.resolve(ano);
   }
 }

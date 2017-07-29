@@ -21,7 +21,6 @@ export class TodosOsDadosComponent implements OnInit {
     dados_da_samu : Dados[];
     uf: UF;
     id = 21;
-    numero = 0;
     ids: number[];
     ufs: UF[];
     atendimentos: Total[];
@@ -30,11 +29,8 @@ export class TodosOsDadosComponent implements OnInit {
     { }
 
     ngOnInit(): void {
-        this.numero = this.totalService.teste();
-        // this.uf = this.ufService.getPorID(this.id);
         this.ufs = this.ufService.getUFs();
         this.atendimentos = this.totalService.getPorUFMunicipiosAtendidosPorEstadoTodas(this.ufs);
-        // this.numero = this.totalService.teste();
     }
 
 }

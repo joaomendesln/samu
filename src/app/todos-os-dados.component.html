@@ -1,8 +1,21 @@
 <div style="text-align:center" class="corpo">
-  oi
-  {{numero}}
-  {{atendimentos}}
-  <div *ngFor="let atendimento of atendimentos">
-    {{atendimento.uf.nome}} <span *ngFor="let dado of atendimento.dados">{{dado.ano}} {{dado.valor}}</span>
-  </div>
+  <table *ngFor="let atendimento of atendimentos">
+    <tr>
+      <td colspan="2">
+        {{atendimento.uf.nome}}
+      </td>
+    </tr>
+    <tr>
+      <td>Ano</td>
+      <td>Municípios Atendidos</td>
+    </tr>
+    <tr *ngFor="let dado of atendimento.dados">
+      <td>
+        {{dado.ano}}
+      </td>
+      <td>
+        {{dado.valor}}
+      </td>
+    </tr>
+  </table>
 </div>
