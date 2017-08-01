@@ -8,8 +8,6 @@ import {SamuService} from './services/samu.service'
 
 import {UFs} from './services/mock-ufs'
 
-//import { Total } from './types/total';
-//import { TotalService } from './services/total.service'
 
 
 @Component({
@@ -28,8 +26,7 @@ export class ResumoComponent implements OnInit {
     { }
 
     ngOnInit(): void {
-        this.ufs = this.ufService.getAll();
         this.ufService.getPorID(this.id).then(uf => this.uf = uf);
-        this.samuService.getMunicipioMedia(this.id).then(media => this.media = media);
+        //this.samuService.getMunicipioMedia(this.id).then(media => this.media = media);
     }
 }

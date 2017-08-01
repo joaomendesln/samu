@@ -29,7 +29,7 @@ export class TodosOsDadosComponent implements OnInit {
     { }
 
     ngOnInit(): void {
-        this.ufs = this.ufService.getUFs();
+        this.ufService.getAll().then(ufs => this.ufs = ufs);
         this.atendimentos = this.totalService.getPorUFMunicipiosAtendidosPorEstadoTodas(this.ufs);
     }
 
