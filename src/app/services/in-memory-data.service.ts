@@ -1,9 +1,9 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import {UF} from '../types/uf';
+import { UF } from '../types/uf';
 
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const uf : UF[] = [
+    const ufs : UF[] = [
         {id: 11, nome: "Rondônia", area: 237765.376},
         {id: 12, nome: "Acre", area: 164123.712},
         {id: 13, nome: "Amazonas", area: 1559149.074},
@@ -32,6 +32,6 @@ export class InMemoryDataService implements InMemoryDbService {
         {id: 52, nome: "Goiás", area: 340110.385},
         {id: 53, nome: "Distrito Federal", area: 5779.999}
     ];
-    return {uf};
+    return {ufs};
   }
 }

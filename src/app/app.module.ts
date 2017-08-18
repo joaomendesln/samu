@@ -5,8 +5,8 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
 // Imports for loading & configuring the in-memory web api
-// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { InMemoryDataService }  from './services/in-memory-data.service';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './services/in-memory-data.service';
 
 import { UFService } from './services/uf.service';
 import { SamuService } from './services/samu.service';
@@ -26,7 +26,7 @@ import { TodosOsDadosComponent } from './todos-os-dados.component';
   imports: [
     BrowserModule,
     HttpModule,
-    // InMemoryWebApiModule.forRoot(InMemoryDataService),
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
     RouterModule.forRoot([
       {
         path: 'resumo',
