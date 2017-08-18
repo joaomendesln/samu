@@ -1,59 +1,54 @@
 {
-  "name": "joaomendesln",
+  "name": "samu",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "postinstall": "ng build",
+    "start": "http-server dist/",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "engines": {
+    "node": "6.10.2",
+    "npm": "3.10.10"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^4.0.0",
+    "@angular/cli": "1.1.2",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
     "@angular/core": "^4.0.0",
     "@angular/forms": "^4.0.0",
     "@angular/http": "^4.0.0",
+    "@angular/language-service": "^4.0.0",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
-    "core-js": "^2.4.1",
-    "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
-  },
-  "devDependencies": {
-    "@angular/cli": "1.1.2",
-    "@angular/compiler-cli": "^4.0.0",
-    "@angular/language-service": "^4.0.0",
     "@types/jasmine": "2.5.45",
     "@types/node": "~6.0.60",
+    "angular-in-memory-web-api": "^0.3.2",
     "codelyzer": "~3.0.1",
+    "core-js": "^2.4.1",
+    "http-server": "^0.10.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
     "karma-chrome-launcher": "~2.1.1",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^1.2.1",
     "protractor": "~5.1.2",
+    "rxjs": "^5.1.0",
     "ts-node": "~3.0.4",
     "tslint": "~5.3.2",
-    "typescript": "~2.3.3"
+    "typescript": "~2.3.3",
+    "zone.js": "^0.8.4"
   },
-  "description": "1. Mostrar no __cabeçalho__ qual a UF da sua avaliação (ver detalhe abaixo)\r 2. Mostrar em __Detail__ o ID e área da UF, bem como a sua média de municípios atendidos\r 3. Mostrar em __master__ o ano e quantidade de municípios atendidos da UF",
-  "main": "karma.conf.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joaomendesln/samu.git"
-  },
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/joaomendesln/samu/issues"
-  },
-  "homepage": "https://github.com/joaomendesln/samu#readme"
+  "devDependencies": {}
 }
